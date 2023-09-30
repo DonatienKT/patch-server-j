@@ -7,6 +7,7 @@ pipeline {
       steps{
         dir('/home/ec2-user/ansible-det'){
           sh 'ansible-playbook patch.yml'
+          sh 'ansible ws -m ping'
         }
       }
     }
